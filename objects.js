@@ -47,3 +47,19 @@ const Library = {
     return this.books.filter(book => book.isBorrowed);
   }
 };
+
+
+const book1 = createBook("The Hobbit", "J.R.R. Tolkien", "123456");
+const book2 = createBook("1984", "George Orwell", "654321");
+
+Library.addBook(book1);
+Library.addBook(book2);
+
+book1.borrow();
+
+console.log("Available Books:", Library.listAvailableBooks());
+console.log("Borrowed Books:", Library.listBorrowedBooks());
+
+book1.returnBook();
+
+console.log("Available Books after return:", Library.listAvailableBooks());
