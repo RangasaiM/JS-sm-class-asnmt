@@ -44,7 +44,11 @@ const Library = {
   },
 
   listBorrowedBooks() {
-    return this.books.filter(book => book.isBorrowed);
+    const borrowed = this.books.filter(book => book.isBorrowed);
+    return borrowed.map(book => ({
+      title: book.title,
+      author: book.author
+    }))
   }
 };
 
