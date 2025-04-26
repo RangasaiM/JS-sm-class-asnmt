@@ -1,6 +1,6 @@
 function createCalculator() {
     return {
-        add: function (a, b) {
+        add(a, b) {
             return a + b;
         },
         subtract: function (a, b) {
